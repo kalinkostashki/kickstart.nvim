@@ -629,6 +629,9 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        -- Add terraform-ls support
+        terraformls = {},
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
