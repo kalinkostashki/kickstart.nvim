@@ -339,6 +339,10 @@ require('lazy').setup({
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
+      -- Adding telescope terraform-doc plugin
+      {
+        'ANGkeith/telescope-terraform-doc.nvim',
+      },
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
         'nvim-telescope/telescope-fzf-native.nvim',
 
@@ -635,8 +639,16 @@ require('lazy').setup({
         -- Add terraform-ls support
         terraformls = {},
 
+        -- Add tflint -> errors for major cloud providers like invalid instance types.
+        -- Deprecated synthax, unused declarations. Best practice suggestions.
+        tflint = {},
+
         -- Add trivy linter support
         trivy = {},
+
+        -- Add support for helm and yaml files.
+        helm_ls = {},
+        yamlls = {},
 
         lua_ls = {
           -- cmd = { ... },
@@ -908,7 +920,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'go', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = 'all',
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
