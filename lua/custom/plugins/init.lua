@@ -17,4 +17,13 @@ return {
     'karb94/neoscroll.nvim',
     opts = {},
   },
+  {
+    'f-person/git-blame.nvim',
+    event = { 'VeryLazy' },
+    opts = {
+      enabled = false,
+      message_template = ' <summary> • <date> • <author> • <<sha>>', -- template for the blame message, check the Message template section for more options
+      date_formate = '%d-%m-%Y %H:%M:%S',
+    },
+  },
 }
