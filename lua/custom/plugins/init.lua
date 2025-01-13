@@ -13,4 +13,8 @@ return {
       vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
     end,
   },
+  {
+    'karb94/neoscroll.nvim',
+    opts = {},
+  },
 }
