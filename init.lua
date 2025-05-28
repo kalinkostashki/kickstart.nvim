@@ -650,6 +650,9 @@ require('lazy').setup({
         helm_ls = {},
         yamlls = {},
 
+        -- Add python support
+        pylsp = {},
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
